@@ -1,0 +1,33 @@
+.reg-wrapper {
+    background-color: var(--white);
+    border-radius: 15px;
+    width: 30vw;
+    margin-top: 10px;
+}
+
+.reg-header {
+    border-radius: 15px 15px 0 0;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.reg-body p {
+    color: var(--darkGray);
+}
+
+.reg-body {
+    padding: 15px;
+}
+
+.reg-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+
+.reg-title {
+    font-weight: bold;
+}

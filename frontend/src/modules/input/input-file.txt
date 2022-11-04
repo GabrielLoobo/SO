@@ -1,0 +1,10 @@
+ORG    	29E
+INICIO:   	LOAD  	X
+         		ADD    	Y 
+          		STORE  	Z#comentarios
+          		STOP
+          		JUMP   	INICIO
+X:        	DATA   	10
+Y:        	DATA   	25
+Z:        	AREA   	3
+          		END

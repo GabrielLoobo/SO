@@ -1,0 +1,43 @@
+.mem-wrapper {
+    background-color: var(--white);
+    border-radius: 15px;
+    width: 30vw;
+}
+
+.mem-header {
+    border-radius: 15px 15px 0 0;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.mem-body p {
+    color: var(--darkGray);
+}
+
+.mem-body {
+    padding: 15px;
+}
+
+.mem-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+
+.mem-title {
+    font-weight: bold;
+}
+
+.mem-footer {
+    display: flex;
+    flex-direction: row;
+    padding:15px;
+}
+
+.mem-footer-icon {
+    margin: 0 10px;
+    cursor: pointer;
+}

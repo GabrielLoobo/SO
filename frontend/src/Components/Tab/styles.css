@@ -1,0 +1,17 @@
+.tab-wrapper {
+    background-color: var(--gray);
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    margin-right: 2px;
+}
+
+.active {
+    background-color: var(--primary);
+}
+
+p {
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+}

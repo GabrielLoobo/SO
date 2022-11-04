@@ -1,0 +1,17 @@
+ADD R1 R2 0xAB37
+SUB R3 R1 0X1 #Comentário aqui
+
+MUL R1 R1 R3
+# mais comentários
+
+
+          ORG    029E
+INICIO:   LOAD   X
+          ADD    Y 
+          STORE  Z
+          STOP
+          JUMP   INICIO
+X:        DATA   10
+Y:        DATA   25
+Z:        AREA   3
+          END
