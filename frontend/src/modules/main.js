@@ -46,30 +46,51 @@ const test1 = async () => {
     }
 
     // Rotina de testes
+    inputProgram = await fileSystem.readFile('input-file.txt');
+
+    // A) 
+    console.log("Teste 1 - item A");
+    console.log("Programa de exemplo inserido na memória: ")
+    setupExecution(inputProgram);
+    printMemFromPos(660, 30)
+    _es._memory.clearMem();
 
     // B) 
     console.log("Teste 1 - item B");
-    console.log("Conteúdo da memória antes de executar o teste: \n");
-    printMemFromPos(660, 20) // 660 decimal = 294 hex
-    inputProgram = await fileSystem.readFile('input-file.txt');
+    console.log("Conteúdo da memória antes de executar efetuar a carga: \n");
+    printMemFromPos(660, 30) // 660 decimal = 294 hex
+    
     setupExecution(inputProgram);
-    printMemFromPos(660, 20)
+    console.log("Conteúdo da memória após de executar efetuar a carga: \n");
+    printMemFromPos(660, 30)
 
     // C)
     console.log("Teste 1 - item C");
-    printMemFromPos(660, 20)
-    // TODO: Implementar dumper simples
+    console.log("Valores da memória que serão inseridos na fita objeto pelo dumper: ");
+    printMemFromPos(660, 30)
     fitaSaida = _dumper.dumpToBinaryStringFromAddr(_es._memory.get_memory(), 660);
+    console.log("Fita objeto obtida: ");
+    console.log(fitaSaida + "\n");
 
     //D)
     console.log("Teste 1 - item D");
+    console.log("Zerando o conteúdo da memória..");
     _es._memory.clearMem();
-    printMemFromPos(660, 20);
+    printMemFromPos(660, 30);
+
+    console.log("Inserindo o conteúdo da fita objeto na memória..")
     _loader.loadFromBinaryString(fitaSaida, _es._memory);
-    printMemFromPos(660, 20);
+    printMemFromPos(660, 30);
 
 }
 
+
+const test3 = () => {
+    fileSystem.mainLoop();
+}
+
 const main = (async () => {
-    await test1();
+    // await test1();
+    await test3();
+
 })();
